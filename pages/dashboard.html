@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>S3-LPF-WebsiteDesign</title>
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="../assets/css/Navbar-Right-Links-icons.css">
+    <link rel="stylesheet" href="../assets/css/Table-With-Search-search-table.css">
+    <link rel="stylesheet" href="../assets/css/Table-With-Search.css">
+</head>
+
+<body style="background-color: #202020;">
+    <nav class="navbar navbar-light navbar-expand-md py-3" style="background-color: #191919;">
+        <div class="container"><a class="navbar-brand d-flex align-items-center" href="#"><span class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center me-2 bs-icon"><img width="48" height="53" src="../assets/img/bucket.png"></span><span style="color: #d4d4d4;font-size: 22px;">Jowi's AWS S3 Object Sharing System</span></a><a class="btn btn-primary justify-content-xxl-end ms-md-2" role="button" href="#" style="font-size: 18px;">Logout</a></div>
+    </nav>
+    <div class="col-md-12 search-table-col" style="margin-top: 0px;padding-top: 20px;">
+        <div class="form-group pull-right col-lg-4" style="padding-bottom: 20px;padding-right: 250px;"><input type="text" class="search form-control" placeholder="Search files.." style="font-size: 20px;"></div><span class="counter pull-right"></span>
+        <div class="table-responsive table table-hover table-bordered results" style="padding-left: 250px;padding-right: 250px;">
+            <table class="table table-hover table-bordered">
+                <thead class="bill-header cs">
+                    <tr>
+                        <th id="trs-hd-3" class="col-lg-3" style="background: #143a4e;font-size: 20px;">File</th>
+                        <th id="trs-hd-2" class="col-lg-2" style="background: #143a4e;font-size: 20px;">Size</th>
+                        <th id="trs-hd-4" class="col-lg-2" style="background: #143a4e;font-size: 20px;">Upload date</th>
+                        <th id="trs-hd-6" class="col-lg-2" style="background: #143a4e;font-size: 20px;">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="warning no-result">
+                        <td colspan="12"><i class="fa fa-warning"></i>&nbsp; No Result !!!</td>
+                    </tr>
+                    <tr>
+                        <td style="color: #d4d4d4;font-size: 20px;padding-left: 12px;padding-top: 10px;">RestaurantMenu.jpg</td>
+                        <td style="color: #d4d4d4;font-size: 20px;padding-left: 12px;padding-top: 10px;">16MB</td>
+                        <td style="color: #d4d4d4;font-size: 20px;padding-left: 12px;padding-top: 10px;">2023-06-07</td>
+                        <td class="text-center" style="color: #d4d4d4;font-size: 20px;"><button class="btn btn-success" data-bs-toggle="tooltip" data-bss-tooltip="" style="margin-left: 15px;" type="submit" title="Download"><i class="fas fa-arrow-down" style="font-size: 15px;"></i></button><button class="btn btn-success" data-bs-toggle="tooltip" data-bss-tooltip="" style="background: rgb(26,105,177);margin-left: 15px;" type="submit" title="Share"><i class="fas fa-share" style="font-size: 15px;"></i></button><button class="btn btn-danger" data-bs-toggle="tooltip" data-bss-tooltip="" style="margin-left: 15px;" type="submit" title="Delete"><i class="fa fa-trash" style="font-size: 15px;"></i></button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../assets/js/bs-init.js"></script>
+    <script src="../assets/js/Table-With-Search-search-table.js"></script>
+</body>
+
+</html>
