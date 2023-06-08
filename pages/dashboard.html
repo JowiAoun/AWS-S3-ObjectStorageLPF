@@ -16,7 +16,16 @@
 
 <body style="background-color: #202020;">
     <nav class="navbar navbar-light navbar-expand-md py-3" style="background-color: #191919;">
-        <div class="container"><a class="navbar-brand d-flex align-items-center" href="#"><span class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center me-2 bs-icon"><img width="48" height="53" src="../assets/img/bucket.png"></span><span style="color: #d4d4d4;font-size: 22px;">Jowi's AWS S3 Object Sharing System</span></a><a class="btn btn-primary justify-content-xxl-end ms-md-2" role="button" href="#" style="font-size: 18px;">Logout</a></div>
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <span class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center me-2 bs-icon"><img width="48" height="53" src="../assets/img/bucket.png"></span>
+                <span style="color: #d4d4d4;font-size: 22px;">Jowi's AWS S3 Object Sharing System</span>
+            </a>
+            <div class="d-flex justify-content-end align-items-center">
+                <button onclick="selectObject()" class="btn btn-primary justify-content-xxl-end ms-md-2" role="button" href="#" style="font-size: 18px;">Upload</button>
+                <button onclick="userLogout()" class="btn btn-primary justify-content-xxl-end ms-md-2" role="button" href="#" style="font-size: 18px; margin-left: 10px;">Logout</button>
+            </div>
+        </div>
     </nav>
     <div class="col-md-12 search-table-col" style="margin-top: 0px;padding-top: 20px;">
         <div class="form-group pull-right col-lg-4" style="padding-bottom: 20px;padding-right: 250px;"><input type="text" class="search form-control" placeholder="Search files.." style="font-size: 20px;"></div><span class="counter pull-right"></span>
@@ -44,9 +53,10 @@
             </table>
         </div>
     </div>
-    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+    <!--<script src="../assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="../assets/js/bs-init.js"></script>
-    <script src="../assets/js/Table-With-Search-search-table.js"></script>
+    <script src="../assets/js/Table-With-Search-search-table.js"></script>-->
+    <script src="../scripts/script.js"></script>
 </body>
 
 </html>
