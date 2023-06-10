@@ -1,14 +1,8 @@
-const { S3, ListObjectsV2Command, HeadObjectCommand } = require("@aws-sdk/client-s3");
+const { ListObjectsV2Command, HeadObjectCommand } = require("@aws-sdk/client-s3");
+const s3 = require("./auth.js");
 require('dotenv').config();
 
-const region = 'us-east-1';
-const s3 = new S3({ region });
-
-// Initialize the Amazon Cognito credentials provider
-AWS.config.region = 'us-east-1'; // Region
-AWS.config.credentials = new AWS.CognitoIdentityCredentials({
-    IdentityPoolId: 'us-east-1:592b675f-95c1-4596-beb8-25192a83d938',
-})
+//const s3 = new S3({ region });
 
 function selectObject() {
     // Create a file input element
@@ -24,9 +18,8 @@ function selectObject() {
 
 async function uploadObject(event) {
     const file = event.target.files[0];
-  
     if (file) {
-        const bucket = "staticwebsite-lpf-12321";
+        const bucket = process.env.BUCKET;
         const fileName = file.name;
         const fileSize = file.size;
         const uploadDate = new Date().toISOString();
@@ -54,14 +47,14 @@ async function uploadObject(event) {
 async function getAllFilesMetadata() {
     try {
         const listObjectsCommand = new ListObjectsV2Command({
-            Bucket: "staticwebsite-lpf-12321"
+            Bucket: process.env.BUCKET
         });
 
         const { Contents } = await s3Client.send(listObjectsCommand);
 
         for (const object of Contents) {
             const headObjectCommand = new HeadObjectCommand({
-                Bucket: "staticwebsite-lpf-12321",
+                Bucket: process.env.BUCKET,
                 Key: object.Key
             });
 
